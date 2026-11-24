@@ -1,197 +1,178 @@
-<div align="center">
+# Word Atlas Mandarin · 普通话学习图鉴
 
-<a href="https://0xlei.tech/words/"><img src="docs/assets/cover-v2.jpg" alt="词光 Word Atlas — 一词一画，点亮雅思" width="100%"></a>
+**A picture for every word. Character stories to remember. Playful pinyin practice.**
 
-# 词光 · Word Atlas
+**一词一画，用字形故事帮助记忆，在游戏中学习拼音。**
 
-**把单词变成画面，让复习有迹可循。**
+Word Atlas Mandarin is a planned adaptation of [Word Atlas · 词光](https://github.com/designfuchen/word-atlas) for children learning Mandarin, especially a seven-year-old who is more comfortable in English. We want to bring its illustrated learning style to Mandarin with a new collection of words, pictures, pronunciation, and examples.
 
-7,298 个雅思词条 · 原创插画 · 英美发音 · FSRS 间隔复习
+Word Atlas Mandarin 计划将 [Word Atlas · 词光](https://github.com/designfuchen/word-atlas) 的插画学习方式用于普通话启蒙，尤其面向英语更熟练的七岁儿童。我们希望围绕普通话重新编写词汇内容、制作图片、配备发音和例句，让孩子通过熟悉的英语理解中文。
 
-[**立即体验 ↗**](https://0xlei.tech/words/)　 /　 [48 秒介绍](docs/assets/launch.mp4)　 /　 [下载词库](data/)　 /　 [English](README.en.md)
+> **Current status:** The application and bundled dataset still teach English IELTS vocabulary. The Mandarin vocabulary cards, character-history illustrations, and pinyin module described below are planned features. This README records the direction of the adaptation.
+>
+> **当前状态：** 应用和随附词库仍是原项目的雅思英语学习版本。下文介绍的普通话词卡、汉字演变插画和拼音模块均为计划功能。本 README 用于说明项目的改造方向。
 
-[![Code: MIT](https://img.shields.io/badge/Code-MIT-17283B?style=flat-square)](LICENSE)
-[![Dataset: CC BY 4.0](https://img.shields.io/badge/Dataset-CC_BY_4.0-AD5038?style=flat-square)](CONTENT_LICENSE.md)
+## Learning goals / 学习目标
 
-<br>
+Start with a small, curated beginner collection built around a child's everyday life: family, animals, food, numbers, school, and nature. Use HSK vocabulary as a reference for selection and later expansion. The first release prioritizes useful, familiar words over completing an exam syllabus.
 
-**词光 iOS App 已在 App Store 上架，免费下载：[App Store · 搜索「词光」](https://apps.apple.com/app/id6827459612)**
+从少量精选的入门词汇开始，围绕孩子熟悉的家庭、动物、食物、数字、学校和自然等主题展开。参考 HSK 词汇选择内容，并为后续扩展保留分级依据。首个版本优先帮助孩子掌握常用、熟悉的词语，不以完成考试大纲为目标。
 
-[![关注 @yangleiocx3](https://img.shields.io/badge/%E5%85%B3%E6%B3%A8%E6%88%91-@yangleiocx3-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/yangleiocx3)
+Use **simplified Chinese first**, with English explanations and instructions as a bridge. Keep sessions short, feedback encouraging, and activities approachable for a young learner. Build on the existing app's spaced review and progress tracking as Mandarin content becomes available.
 
-</div>
+以**简体中文为主**，用英语解释和操作提示帮助孩子理解。每次学习简短轻松，反馈以鼓励为主，活动适合儿童参与。随着普通话内容逐步加入，改造现有应用的间隔复习和学习进度功能。
 
----
+## Planned learning experience / 计划中的学习体验
 
-词光是一款以插画和语境为核心的雅思背词应用。看画面理解词义，听发音建立联系，再用主动回忆和间隔复习巩固记忆。无需账号，学习进度保存在自己的设备上。
+### 1. Illustrated vocabulary / 插画词汇
 
-> **版本说明**：这个仓库提供词光的开源基础版及配套数据集。在线网站独立迭代，功能与仓库可能不同；仓库里的代码和内容分别遵循下方的 MIT / CC BY 4.0 授权。
+Create a Mandarin-specific illustration for every target word, keeping the warm, consistent visual style that makes Word Atlas appealing. Pictures should connect a word with a clear object, action, or everyday scene that a child can understand.
 
-[产品预览](#产品预览) · [学习方式](#学习方式) · [本地运行](#本地运行) · [开放数据](#开放数据) · [参与贡献](#参与贡献)
+为每个目标词语制作专属的普通话学习插画，延续 Word Atlas 温暖、统一的视觉风格。图片将词义与清楚的物体、动作或生活场景联系起来，帮助孩子看图理解。
 
-## 产品预览
+Each planned word card brings together:
 
-### 一本可以听、可以练的单词图鉴
+- Simplified characters and standard pinyin with tone marks.
+- A clear English meaning and a child-friendly illustration.
+- Mandarin pronunciation, with slow playback for beginners.
+- A short Mandarin example with pinyin and an English translation.
+- Simple picture matching, listening, and recall activities.
 
-<img src="docs/assets/atlas-desktop.jpg" alt="开源版桌面图鉴：插画词卡和词汇浏览" width="100%">
+每张计划中的词卡包含：
 
-<table>
-<tr>
-<td width="50%"><img src="docs/assets/today-mobile.jpg" alt="手机端今日学习页" width="100%"></td>
-<td width="50%"><img src="docs/assets/word-mobile.jpg" alt="手机端词卡，展示插画、英美发音与例句" width="100%"></td>
-</tr>
-<tr><td align="center">每日计划，把注意力放在今天</td><td align="center">插画、词义、发音，在一张词卡里</td></tr>
-</table>
+- 简体汉字与带声调符号的规范拼音。
+- 清楚的英语释义和适合儿童的插画。
+- 普通话发音，以及适合初学者的慢速播放。
+- 简短的中文例句、例句拼音和英语翻译。
+- 看图配对、听音辨词和回忆练习。
 
-<sub>以上为仓库开源版的实际界面。页首为品牌概念插画。</sub>
+### 2. Character stories and evolution / 汉字故事与字形演变
 
-### 学过的词，汇成自己的星图
+Help children remember characters by showing how their shapes developed. Where reliable references are available, use an illustrated sequence connecting the original subject or idea, documented earlier written forms, and the modern simplified character. Characters such as 日, 山, and 木 are useful starting points. Include older or traditional forms where they help explain the history.
 
-<img src="docs/assets/galaxy.jpg" alt="词汇星图界面：按话题组织单词，展示学习进度" width="100%">
+通过展示字形的发展过程，帮助孩子记住汉字。在有可靠资料支持时，用连续插画连接最初描绘的事物或表达的概念、有记载的早期字形，以及现代简体字。可以从日、山、木等字入手，在有助于理解演变过程时展示古文字或繁体字形。
 
-19 个话题组成词汇星图。拖动旋转、滚动缩放，点击星星打开词卡；学习状态用不同亮度呈现。采用 WebGL2 渲染，不支持的设备提供降级显示。
+Some Chinese characters began as pictographs; many others combine components that suggest meaning and pronunciation. Explain those components in simple language too. For words made of several characters, distinguish each character's history from the meaning of the whole word.
 
-<details>
-<summary><b>看 48 秒宣传片</b></summary>
+一部分汉字起源于象形，许多汉字则由提示意义和读音的部件构成。也要用简单的语言解释这些部件。对于由多个汉字组成的词语，分别介绍单字的来历和整个词语的意思。
 
-<a href="docs/assets/launch.mp4"><img src="docs/assets/launch-preview.webp" alt="点击观看词光宣传片" width="100%"></a>
+Historical illustrations must cite their sources. Creative memory stories can help where a historical explanation is unavailable or too complex, but must be labeled as **memory aids**, separate from documented character history. Generated artwork must follow reviewed reference material, and uncertain origins should remain identified as uncertain.
 
-[播放完整视频（含声音）](docs/assets/launch.mp4)
+字形演变插画需要注明资料来源。当历史解释缺乏可靠依据或过于复杂时，可以提供创意记忆故事，但必须标明是**记忆辅助**，与有据可查的汉字历史区分开来。生成的图片应以经过审校的参考资料为依据，对尚无定论的字源保留说明。
 
-</details>
+### 3. Pinyin practice / 拼音练习
 
-## 学习方式
+Add a separate pinyin learning module that connects sounds with familiar vocabulary:
 
-| 环节 | 你会做什么 |
-| :--- | :--- |
-| **看见** | 每个词配一幅插画、中英释义、两条原创例句，以及搭配、词族和用法提示。 |
-| **听见** | 切换英音、美音，听日常例句朗读；部分词条另含第二条例句录音。 |
-| **想起** | 看义选词、看图补句、听音辨词、拼写，逐步练习主动回忆。 |
-| **复习** | FSRS 根据学习记录安排复习，目标记忆率可调。只有首次作答计入正确率。 |
-| **积累** | 星图展示学习进度；打字练习独立统计；支持导出和恢复本地进度。 |
+- Initials (声母), finals (韵母), and combining them into syllables.
+- The four tones and the neutral tone, with clear audio and visual tone contours.
+- Listening and repetition, sound-to-pinyin matching, and tone recognition games.
+- Short practice sessions that lead back to words the child is learning.
 
-**本地优先。** 无需注册；看过的词条与媒体可缓存供离线使用。换设备前，请先导出进度备份。
+新增独立的拼音学习模块，把发音练习与熟悉的词汇联系起来：
 
-<details>
-<summary><b>听发音、例句与环境声样本</b></summary>
+- 学习声母、韵母，以及如何拼成音节。
+- 通过清晰的示范音频和声调曲线，认识四声和轻声。
+- 通过听读、跟读、听音选拼音和辨别声调等游戏进行练习。
+- 每次安排简短练习，并与孩子正在学习的词语相互关联。
 
+## Content sources and review / 内容来源与审校
 
+[Chinese Word Atlas by scoresby13](https://github.com/scoresby13/chinese-word-atlas) is a candidate starting point for HSK vocabulary. It provides [JSON and CSV datasets](https://github.com/scoresby13/chinese-word-atlas/tree/main/data). Official HSK vocabulary resources and reputable dictionaries may also guide selection and verification. Imported or generated content needs review before becoming part of the children's curriculum.
 
-拿 *abandon* 举例，点开就能听（在线播放）：
+[scoresby13 的 Chinese Word Atlas](https://github.com/scoresby13/chinese-word-atlas) 是 HSK 词汇的候选来源，提供 [JSON 和 CSV 词库](https://github.com/scoresby13/chinese-word-atlas/tree/main/data)。也可以参考官方 HSK 词汇资料和可靠词典进行选词与核对。导入或生成的内容需要经过审校，再纳入儿童学习内容。
 
-| | |
-|---|---|
-| 🇬🇧 英音 | [abandon /əˈbændən/](https://0xlei.tech/words/atlas/audio/uk/abandon.mp3) |
-| 🇺🇸 美音 | [abandon /əˈbændən/](https://0xlei.tech/words/atlas/audio/us/abandon.mp3) |
-| 📖 例句朗读 | [We had to abandon our car in the snow.](https://0xlei.tech/words/atlas/audio/ex/abandon.mp3) |
+Before adding content:
 
-全部 7,298 个词都有英音、美音和例句朗读，还有 1,011 个重点词的第二条例句也配了朗读。
+- Check simplified forms, English meanings, pinyin, pronunciation, examples, and suitability for children.
+- Record the source, the HSK edition and level where applicable, and any modifications; verify coverage before making claims about it.
+- Check reuse permissions before importing text, images, or audio, and retain required attribution. New distributed content must meet the repository's CC BY 4.0 contribution requirements.
+- Use reliable character-history references, with documented history and invented mnemonics clearly distinguished.
 
-### 环境声与交互声音
+加入内容前需确认：
 
-| | |
-|---|---|
-| 🎙 **开屏配音** | [「欢迎打开雅思大门」](https://0xlei.tech/words/sfx/splash-voice.mp3)：星尘汇聚成“词光”，大门打开 |
-| 🌌 **星图配音** | [「这是你的词汇星图。每学会一个词，就点亮一颗星。」](https://0xlei.tech/words/sfx/voice-galaxy-hello.mp3) |
-| 🎵 **星空音乐** | [一段可无缝循环的原创配乐](https://0xlei.tech/words/sfx/amb-stars.mp3)，默认陪你背词 |
-| 🌧 **6 段环境声** | [雨天图书馆](https://0xlei.tech/words/sfx/amb-rain.mp3) · [清晨海岸](https://0xlei.tech/words/sfx/amb-sea.mp3) · [林间早晨](https://0xlei.tech/words/sfx/amb-forest.mp3) · [夜晚壁炉](https://0xlei.tech/words/sfx/amb-fire.mp3) · [远航船舱](https://0xlei.tech/words/sfx/amb-voyage.mp3) · [安静咖啡馆](https://0xlei.tech/words/sfx/amb-cafe.mp3) |
-| ✨ **界面音效** | 答对、答错、翻卡、打字、连胜、点亮星星……每个操作都有自己的声音；读单词时背景音会自动压低 |
+- 核对简体字形、英语释义、拼音、发音、例句，以及内容是否适合儿童。
+- 记录来源、适用的 HSK 版本与级别，以及所做的修改；核实覆盖范围后再作说明。
+- 导入文字、图片或音频前确认使用许可，并保留所需署名。新增的分发内容须符合仓库关于 CC BY 4.0 的贡献要求。
+- 汉字演变采用可靠资料，并明确区分有据可查的历史与创作的记忆口诀或故事。
 
-全部素材都在仓库里：插画在 `public/atlas/img/`，录音在 `public/atlas/audio/`，这两类按 CC BY 4.0 开放；界面声音和配乐在 `public/sfx/`，随应用一起提供。
+## Roadmap / 开发路线
 
+All milestones below are planned. The first goal is a useful beginner experience; broader HSK coverage follows after the learning approach has been tried with a child.
 
-</details>
+以下阶段均为计划。首先做出适合儿童使用的入门体验，再根据实际学习反馈扩展 HSK 内容。
 
-## 本地运行
+| Milestone | Planned outcome | 阶段目标 |
+| :--- | :--- | :--- |
+| **1. Beginner atlas / 入门图鉴** | Select everyday words using HSK as a reference; create and review Mandarin word cards, illustrations, audio, and bilingual examples. | 参考 HSK 精选生活词汇，制作并审校普通话词卡、插画、音频和双语例句。 |
+| **2. Characters and sounds / 字形与读音** | Add sourced character-story illustrations and the separate pinyin practice module, linked to the beginner vocabulary. | 加入有资料依据的汉字故事插画和独立拼音练习模块，与入门词汇关联。 |
+| **3. Grow and review / 扩展与复习** | Expand HSK coverage gradually and adapt FSRS spaced review and the vocabulary galaxy to track Mandarin learning. | 逐步扩大 HSK 词汇覆盖，改造 FSRS 间隔复习和词汇星图，记录普通话学习进度。 |
 
-需要 **Node.js 20+** 和 npm。仓库含完整图片与录音，首次下载可能较久。
+## Existing foundation and visual reference / 现有基础与风格参考
+
+The current Word Atlas foundation includes illustrated English vocabulary cards, UK/US audio, recall activities, FSRS spaced repetition, and a vocabulary galaxy. Progress is stored locally without an account, with backup export and import. These are foundations to adapt for Mandarin.
+
+现有 Word Atlas 基础包含英语插画词卡、英美发音、回忆练习、FSRS 间隔复习和词汇星图。学习进度保存在本地，无需账号，并支持备份导出与导入。这些能力将作为普通话版本的改造基础。
+
+The screenshot and demo links below show the **original English-learning project**, providing a visual reference for this adaptation. The hosted original may differ from the repository edition.
+
+下方截图和演示链接展示的是**原版英语学习项目**，作为本项目的视觉参考。原项目在线版本可能与仓库版本有所不同。
+
+![Original Word Atlas English vocabulary atlas / 原版 Word Atlas 英语词汇图鉴](docs/assets/atlas-desktop.jpg)
+
+[Original website / 原项目网站](https://0xlei.tech/words/) · [Original introduction video / 原项目宣传片](docs/assets/launch.mp4)
+
+The bundled [JSON](data/word-atlas.json) and [CSV](data/word-atlas.csv) still contain English vocabulary. The [dataset documentation](docs/dataset.md), [generation pipeline](docs/pipeline.md), and [learning model](docs/learning-model.md) describe the existing foundation. Existing text and illustrations were generated using AI, with speech synthesized using ElevenLabs; the collection has not been manually reviewed entry by entry.
+
+随附的 [JSON](data/word-atlas.json) 和 [CSV](data/word-atlas.csv) 仍为英语词库。[词库说明](docs/dataset.md)、[内容生成流程](docs/pipeline.md)和[记忆模型](docs/learning-model.md)介绍的是现有基础。现有文字和插画由 AI 生成，语音使用 ElevenLabs 合成，整套内容尚未逐条人工审校。
+
+## Local development / 本地开发
+
+Requires **Node.js 20+** and npm. The repository includes the original image and audio collection, so the first download may take time. These commands start the current English-learning app.
+
+需要 **Node.js 20+** 和 npm。仓库包含原项目的图片与音频，首次下载可能较久。以下命令启动的是当前的英语学习应用。
 
 ```bash
-git clone --depth 1 https://github.com/designfuchen/word-atlas.git
-cd word-atlas
+git clone --depth 1 https://github.com/lux2ht/word-atlas-mandarin.git
+cd word-atlas-mandarin
 npm ci
 npm run dev
 ```
 
-打开 **http://localhost:5188**。
+Open / 打开 **[http://localhost:5188](http://localhost:5188)**。
 
 ```bash
-npm test             # 单元测试
-npm run check:atlas  # 词库结构与媒体校验
-npm run build        # 构建到 dist/
+npm test             # Unit tests / 单元测试
+npm run check:atlas  # Dataset and media validation / 词库结构与媒体校验
+npm run build        # Production build in dist/ / 构建到 dist/
 ```
 
-子路径部署：`ATLAS_BASE=/words/ npm run build`。完整说明见 [部署文档](docs/deployment.md)。
+For deployment under a subpath, use `ATLAS_BASE=/words/ npm run build`. See the [deployment guide](docs/deployment.md).
 
-**技术栈**：React 19 · TypeScript · Vite · ts-fsrs · WebGL2
+子路径部署使用 `ATLAS_BASE=/words/ npm run build`，详见[部署文档](docs/deployment.md)。
 
-## 开放数据
+**Stack / 技术栈:** React 19 · TypeScript · Vite · ts-fsrs · WebGL2
 
-不仅可以直接使用应用，也可以把词库用于自己的学习工具、Anki 牌组或研究项目。
+## Contributing / 参与贡献
 
-| 资源 | 开源版内容 | 入口 |
-| :--- | :--- | :--- |
-| 词条 | **7,298** 条，CEFR A1–C2、19 个话题 | [JSON](data/word-atlas.json) · [CSV](data/word-atlas.csv) |
-| 例句 | **14,596** 条，日常与雅思语境，附中文翻译 | [字段说明](docs/dataset.md) |
-| 插画 | **7,298** 幅，512 px WebP，另有缩略图 | [图片目录](public/atlas/img/) |
-| 录音 | **22,905** 段，英音、美音与例句朗读 | [音频目录](public/atlas/audio/) |
+Contributions to the Mandarin direction are welcome: selecting beginner vocabulary, reviewing pinyin and examples, finding reliable character-history references, and developing illustrations and learning activities. For content corrections, include the word or character, the issue, the proposed correction, and a reliable source.
 
-```python
-import json
-from pathlib import Path
+欢迎围绕普通话学习方向参与贡献，包括精选入门词汇、审校拼音与例句、寻找可靠的字形演变资料，以及设计插画和学习活动。提交内容纠错时，请附上词语或汉字、具体问题、修改建议和可靠依据。
 
-words = json.loads(Path("data/word-atlas.json").read_text(encoding="utf-8"))
-b2_environment = [w for w in words if w["cefr"] == "B2" and w["topic"] == "environment"]
-```
+[Report an issue / 报告问题](https://github.com/lux2ht/word-atlas-mandarin/issues) · [Contribution guide / 贡献指南](CONTRIBUTING.md) · [Security policy / 安全政策](SECURITY.md)
 
-<details>
-<summary><b>查看一条词条的数据结构</b></summary>
+## Credits and licensing / 致谢与授权
 
-```json
-{
-  "id": "principle",
-  "w": "principle",
-  "uk": "/ˈprɪnsəpəl/",
-  "us": "/ˈprɪnsəpəl/",
-  "senses": [{ "pos": "n.", "zh": "原则；行为准则", "en": "A belief or rule that guides decisions and behaviour." }],
-  "ex": [
-    { "en": "I refused the extra money as a matter of principle.", "zh": "出于原则，我拒绝了那笔额外的钱。" },
-    { "en": "The principle of equal opportunity should guide policies designed to improve access to higher education.", "zh": "…" }
-  ],
-  "col": ["in principle｜原则上", "basic principle｜基本原则"],
-  "fam": ["principled (adj.)"],
-  "tip": "principle 是原则；principal 是校长、主要的。",
-  "cefr": "B2",
-  "topic": "thinking"
-}
-```
+This adaptation builds on [Word Atlas · 词光](https://github.com/designfuchen/word-atlas), created by [@designfuchen](https://github.com/designfuchen). Thanks to the original contributors for the illustrated learning experience and open-source foundation, and to [scoresby13/chinese-word-atlas](https://github.com/scoresby13/chinese-word-atlas) for sharing a potential Mandarin vocabulary source.
 
-</details>
+本项目基于 [@designfuchen](https://github.com/designfuchen) 创建的 [Word Atlas · 词光](https://github.com/designfuchen/word-atlas)。感谢原项目贡献者提供插画学习体验和开源基础，也感谢 [scoresby13/chinese-word-atlas](https://github.com/scoresby13/chinese-word-atlas) 分享可供参考的普通话词汇资源。
 
-### 内容来源与局限
-
-释义、例句、插画和录音为本项目生成：文字与插画使用生成式 AI，语音使用 ElevenLabs。内容经过自动结构与一致性校验，**尚未逐条人工审校**，可能出现释义、例句、插画或发音错误。它不是官方雅思词表，也不承诺提分。
-
-[内容生成流程](docs/pipeline.md) · [记忆模型](docs/learning-model.md) · [生成脚本](scripts/atlas/)
-
-## 参与贡献
-
-发现问题时，请附上**词条 ID、复现步骤和预期结果**。内容纠错如有词典或其他可靠依据，也请一并提供。
-
-- [报告问题](https://github.com/designfuchen/word-atlas/issues/new/choose)：词条纠错、界面问题或使用建议。
-- [贡献指南](CONTRIBUTING.md)：数据同步、代码规范和提交前检查。
-- [安全政策](SECURITY.md)：安全问题的反馈方式。
-
-## 授权
-
-| 范围 | 许可 |
+| Scope / 范围 | License / 许可 |
 | :--- | :--- |
-| 应用代码 | [MIT](LICENSE) |
-| 词库文本、插画与词条录音 | [CC BY 4.0](CONTENT_LICENSE.md)，署名 Word Atlas contributors（词光） |
-| 第三方依赖与字体 | 遵循各自许可，详见相应文件 |
+| Application code / 应用代码 | [MIT](LICENSE) |
+| Existing vocabulary text, illustrations, and word recordings / 现有词库文本、插画与词条录音 | [CC BY 4.0](CONTENT_LICENSE.md); attribution / 署名：`Word Atlas contributors — CC BY 4.0` |
+| Third-party dependencies and fonts / 第三方依赖与字体 | Their respective licenses / 遵循各自许可 |
 
----
+Preserve attribution and license links, and identify modifications when reusing content. Check each new source's terms before incorporating it into the Mandarin collection.
 
-由 [@designfuchen](https://github.com/designfuchen) 制作。产品进展与制作过程见 [X · @yangleiocx3](https://x.com/yangleiocx3)。
-
-如果词光对你有用，欢迎 Star，或把它分享给正在学英语的朋友。
+复用内容时，请保留署名和许可链接，并说明所做的修改。将新来源纳入普通话词库前，请逐项确认其授权条款。
